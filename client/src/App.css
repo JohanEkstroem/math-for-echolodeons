@@ -3,3 +3,9 @@
     padding: 0;
 
 }
+.active {
+    background-color:rgb(35, 175, 0);
+}
+.inactive {
+    background-color: rgb(51, 1, 1);
+}
