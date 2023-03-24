@@ -9,3 +9,7 @@
 .inactive {
     background-color: rgb(51, 1, 1);
 }
+
+.count {
+    font-size: 3.5rem;
+}
