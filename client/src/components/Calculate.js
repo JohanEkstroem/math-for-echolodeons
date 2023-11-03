@@ -52,7 +52,7 @@ const Calculate = ({ table }) => {
               <div className="input-group">
                 <input
                   type="number"
-                  className="form-control"
+                  className="form-control inputfield"
                   value={userAnswer}
                   onChange={(e) => setUserAnswer(e.target.value)}
                   onKeyPress={handleKeyPress} // Handle Enter key press
@@ -79,7 +79,3 @@ const Calculate = ({ table }) => {
 };
 
 export default Calculate;
-/* TODO: 
-    [ ] autofocus input field
-    [ ] enter key button to answer
-*/

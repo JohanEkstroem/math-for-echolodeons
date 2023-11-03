@@ -29,8 +29,8 @@ function App() {
     }
     return (
         <>
-            <Calculate table={table}/>
             <Option table={table} toggleActive={toggleActive} />
+            <Calculate table={table}/>
             <WrongAnswer />
         </>
     );
