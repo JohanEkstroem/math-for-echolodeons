@@ -30,7 +30,7 @@ function App() {
     return (
         <>
             <Option table={table} toggleActive={toggleActive} />
-            <Calculate />
+            <Calculate table={table}/>
             <WrongAnswer />
         </>
     );
