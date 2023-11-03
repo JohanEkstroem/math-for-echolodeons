@@ -35,7 +35,7 @@ const Calculate = ({ table }) => {
 
   return (
     <>
-      <div className="container-sm p-5 my-2 border bg-dark text-white rounded text-center">
+      <div className="container-sm p-5 my-2 border bg-dark text-white rounded text-center option">
         <div className="col-xs-10">
           {activeTableList.length !== 0 ? (
             <>

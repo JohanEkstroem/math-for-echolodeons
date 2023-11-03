@@ -13,3 +13,7 @@
 .count {
     font-size: 3.5rem;
 }
+
+.option {
+    min-height: 285px;
+}
