@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
 const Calculate = ({ table }) => {
   const [activeTableList, setActiveTableList] = useState([]);
   const [randomFactorFromTableList, setRandomFactorFromTableList] = useState(0);
   const [randomFactor, setRandomFactor] = useState(0);
-  const [userAnswer, setUserAnswer] = useState("");
+  const [userAnswer, setUserAnswer] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
+
+  const inputRef = useRef(null); // Create a ref for the input field
 
   useEffect(() => {
     let activeTables = [];
@@ -30,9 +32,14 @@ const Calculate = ({ table }) => {
       activeTableList[Math.floor(Math.random() * activeTableList.length)]
     );
     setRandomFactor(Math.ceil(Math.random() * 10));
-    setUserAnswer("");
+    setUserAnswer('');
+    inputRef.current.focus(); // Refocus the input field
   };
-
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      checkAnswer();
+    }
+  };
   return (
     <>
       <div className="container-sm p-5 my-2 border bg-dark text-white rounded text-center option">
@@ -48,6 +55,9 @@ const Calculate = ({ table }) => {
                   className="form-control"
                   value={userAnswer}
                   onChange={(e) => setUserAnswer(e.target.value)}
+                  onKeyPress={handleKeyPress} // Handle Enter key press
+                  ref={inputRef} // Attach the ref to the input field
+                  autoFocus
                 />
 
                 <button
